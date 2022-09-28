@@ -167,6 +167,6 @@ void fragment()
 	METALLIC = 0.1;
 	ROUGHNESS = 0.2;
 	SPECULAR = 0.2 + depth_blend_pow * 0.4;
-	//NORMALMAP = NORMAL_MAP;  //IDK why these aren't working
-	//NORMALMAP_DEPTH = 1.25;
+	NORMAL_MAP = NORMAL_MAP;  
+	NORMAL_MAP_DEPTH = 1.25;
 }
