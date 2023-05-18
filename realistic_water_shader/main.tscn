@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://carr86o3rsii4"]
 
-[ext_resource type="Environment" path="res://realistic_water_shader/water_env.tres" id="1"]
+[ext_resource type="Environment" uid="uid://ckqf0ake2vcj4" path="res://realistic_water_shader/water_env.tres" id="1"]
 [ext_resource type="Material" path="res://realistic_water_shader/art/ground/Ground.material" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://cbfcg06gy56ba" path="res://realistic_water_shader/art/rock/Rock.obj" id="3"]
 [ext_resource type="Material" uid="uid://fhwuc6qt3ql6" path="res://realistic_water_shader/art/water/Water.material" id="5"]
@@ -54,9 +54,11 @@ shadow_enabled = true
 
 [node name="Ground" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.92602, 0)
+visible = false
 mesh = SubResource("1")
 
 [node name="Rocks" type="Node3D" parent="."]
+visible = false
 
 [node name="Rock1" type="MeshInstance3D" parent="Rocks"]
 transform = Transform3D(-8.45299, 0, -5.58266, 2.97955, 3.42473, -4.51149, 1.88735, -5.40659, -2.85774, 7.50167, -5.0984, -10.4137)
@@ -96,6 +98,7 @@ mesh = SubResource("2")
 
 [node name="Boat" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.843314, 0.0223624, 0.536956, 0.00730846, 0.999518, -0.0301483, -0.537372, -0.0215001, -0.843071, 10.0811, -1.98067, -4.84802)
+visible = false
 mesh = ExtResource("6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Boat"]
@@ -115,6 +118,7 @@ far = 512.0
 
 [node name="Seaweed" type="GPUParticles3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.25)
+visible = false
 material_override = ExtResource("9")
 amount = 10000
 explosiveness = 1.0
